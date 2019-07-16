@@ -1,7 +1,7 @@
 import MathUtils from './utils/math_utils';
 import { findChild, detectDrag, dispatchClicks } from './util';
 
-const _ptHelper = new Phaser.Point();
+const _ptHelper = new Phaser.Geom.Point();
 
 const defaultOptions = {
   from: 0,

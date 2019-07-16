@@ -1,6 +1,6 @@
 import MathUtils from './utils/math_utils';
 
-const _ptHelper = new Phaser.Point();
+const _ptHelper = new Phaser.Geom.Point();
 const defaultOptions = {
   from: 0,
   to: 200,

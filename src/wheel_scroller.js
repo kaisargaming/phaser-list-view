@@ -2,7 +2,7 @@ import MathUtils from './utils/math_utils';
 import Scroller from './scroller';
 
 const { radToDeg, degToRad } = Phaser.Math;
-const _ptHelper = new Phaser.Point();
+const _ptHelper = new Phaser.Geom.Point();
 
 const defaultOptions = {
   direction: 'angle',
@@ -23,7 +23,7 @@ export default class WheelScroller extends Scroller {
   // extends Scroller.handleDown
   handleDown(target, pointer) {
     if (!this.enabled) return;
-    this.centerPoint = this.clickObject.toGlobal(new Phaser.Point(0, 0));
+    this.centerPoint = this.clickObject.toGlobal(new Phaser.Geom.Point(0, 0));
     _ptHelper.set(pointer.x, pointer.y);
     this.old = this.down = Phaser.Math.normalizeAngle(
       Phaser.Math.angleBetweenPoints(_ptHelper, this.centerPoint)
